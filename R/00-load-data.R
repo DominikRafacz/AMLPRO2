@@ -5,7 +5,7 @@ load_data <- function(data) {
                             col_names = FALSE) %>%
     select(where(is_double))
   data_labels <- read_lines(paste0("data/", data, "_train.labels")) %>%
-    as_factor()
+    as.ordered()
   data_valid <- read_table2(paste0("data/", data, "_valid.data"),
                             col_names = FALSE) %>%
     select(where(is_double))
