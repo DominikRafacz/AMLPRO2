@@ -1,0 +1,18 @@
+if (!require(mRMRe)) {
+  remotes::install_github("bhklab/mRMRe@2d9de55")
+  library(mRMRe)
+}
+
+run_mRMR <- function(data, num_features) {
+  mRMR_data <- mRMR.data(cbind(labels = data$labels, data$train))
+  mRMR_filter <- mRMR.classic(
+    data = mRMR_data,
+    target_indices = 1,
+    feature_count = num_features
+  )
+  # returns a vector of integers with column indices
+  # subtracted 1 because of added labels column at position 1
+  as.integer(solutions(mRMR_filter)[[1]]) - 1
+}
+
+run_mRMR(artificial, 6)
