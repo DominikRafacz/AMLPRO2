@@ -1,10 +1,14 @@
 library(tidyverse)
 
 load_data <- function(data) {
-  data_train <- read.table(paste0("data/", data, "_train.data"))
+  data_train <- read_table2(paste0("data/", data, "_train.data"),
+                            col_names = FALSE) %>%
+    select(where(is_double))
   data_labels <- read_lines(paste0("data/", data, "_train.labels")) %>%
-    as.numeric()
-  data_valid <- read.table(paste0("data/", data, "_valid.data"))
+    as_factor()
+  data_valid <- read_table2(paste0("data/", data, "_valid.data"),
+                            col_names = FALSE) %>%
+    select(where(is_double))
   list(
     train = data_train,
     labels = data_labels,
