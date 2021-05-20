@@ -10,9 +10,14 @@ run_mRMR <- function(data, num_features) {
     target_indices = 1,
     feature_count = num_features
   )
+  mRMR_filter
+}
+
+extract_features_mRMR <- function(mRMR_filter) {
   # returns a vector of integers with column indices
   # subtracted 1 because of added labels column at position 1
   as.integer(solutions(mRMR_filter)[[1]]) - 1
 }
 
-run_mRMR(artificial, 6)
+mRMR_filter_artificial <- run_mRMR(artificial, 5)
+mRMR_features_artificial <- extract_features_mRMR(mRMR_filter_artificial)
