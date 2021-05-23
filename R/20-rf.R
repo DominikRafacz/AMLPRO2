@@ -22,4 +22,4 @@ rf_features_artificial <- extract_features_rf(rf_model_artificial, 3)
 rf_model_digits <- run_rf(digits)
 # use varImpPlot to find optimal num_features
 randomForest::varImpPlot(rf_model_digits)
-rf_features_digits <- extract_features_rf(rf_model_digits, )
+rf_features_digits <- extract_features_rf(rf_model_digits, 7)
