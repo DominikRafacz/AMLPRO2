@@ -21,3 +21,6 @@ extract_features_mRMR <- function(mRMR_filter) {
 
 mRMR_filter_artificial <- run_mRMR(artificial, 5)
 mRMR_features_artificial <- extract_features_mRMR(mRMR_filter_artificial)
+
+mRMR_filter_digits <- run_mRMR(digits, 7)
+mRMR_features_digits <- extract_features_mRMR(mRMR_filter_digits)

@@ -12,3 +12,5 @@ digits: c(3657, 3976, 558, 512, 4196, 4272)
 Possibly only the first three, as there is a clear step between those in score.
 
 ## mRMR
+artificial: c(424, 91, 277, 405, 229)
+digits: c(2433, 482, 2093, 4607, 3229, 1833, 2381)
