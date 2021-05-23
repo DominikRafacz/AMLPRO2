@@ -8,5 +8,7 @@ digits: c(3976, 558, 3657, 905, 3003, 339, 2302)
 
 ## mcfs
 artificial: c(242, 129, 476, 106, 339)
+digits: c(3657, 3976, 558, 512, 4196, 4272)
+Possibly only the first three, as there is a clear step between those in score.
 
 ## mRMR
