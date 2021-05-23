@@ -10,8 +10,7 @@ run_rf <- function(data, ...) {
 
 extract_features_rf <- function(rf_model, num_features) {
   # returns a vector of integers with column indices
-  # subtracted 1 because of added labels column at position 1
-  order(importance(rf_model), decreasing = TRUE)[seq_len(num_features)] - 1
+  order(importance(rf_model), decreasing = TRUE)[seq_len(num_features)]
 }
 
 rf_model_artificial <- run_rf(artificial)
