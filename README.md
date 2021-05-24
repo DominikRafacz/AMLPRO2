@@ -18,5 +18,9 @@ Repository for 2 project for Advanced Machine Learning course
 * artificial: c(476, 49, 425)
 * digits: c() # didn't compute, because there would be at least 50, if not 150 of features chosen
 
+## ReliefFexprank
+* artificial: c(242, 476, 339, 106, 129)
+* digits: c(3657, 558, 4508, 4387, 2302, 3464)
+
 # Dropped algorithms
 Due to how long it took to compute filtered features, we decided not to use the following algorithms: Boruta, and ensemble_fs from EFS package.
