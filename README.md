@@ -17,3 +17,6 @@ Repository for 2 project for Advanced Machine Learning course
 ## BIC
 * artificial: c(476, 49, 425)
 * digits: c() # didn't compute, because there would be at least 50, if not 150 of features chosen
+
+# Dropped algorithms
+Due to how long it took to compute filtered features, we decided not to use the following algorithms: Boruta, and ensemble_fs from EFS package.
