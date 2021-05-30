@@ -56,7 +56,7 @@ results$score(msrs(c("classif.acc", "classif.auc", "classif.bacc"))) %>%
   theme_bw() +
   scale_x_discrete(
     name = "selected features",
-    labels = c("sum of all", "only mRMR", "without mRMR, without correlated", "without mRMR")) +
+    labels = c("sum of all", "only mRMR", "without mRMR", "without mRMR, without correlated")) +
   scale_y_continuous("balanced accuracy") +
   theme(axis.text.x = element_text(angle = 20, hjust = 1)) +
   ggtitle("Comparison of BA on artificial for different models for different selection of features", subtitle = "results for 5 iterations of crossvalidation")
