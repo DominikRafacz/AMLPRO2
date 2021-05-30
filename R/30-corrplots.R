@@ -13,6 +13,9 @@ cor(artificial$train[, artificial_features]) %>%
 cor(artificial$train[, mRMR_features_artificial %>% sort()]) %>%
   corrplot::corrplot()
 
+cor(artificial$train[, c(artificial_features, mRMR_features_artificial %>% sort())]) %>%
+  corrplot::corrplot()
+
 digits_features <- c(
   c(3976, 558, 3657, 905, 3003, 339, 2302),
   c(3657, 3976, 558),
@@ -23,4 +26,7 @@ cor(digits$train[, digits_features]) %>%
   corrplot::corrplot()
 
 cor(digits$train[, mRMR_features_digits %>% sort()]) %>%
+  corrplot::corrplot()
+
+cor(digits$train[, c(digits_features, mRMR_features_digits %>% sort())]) %>%
   corrplot::corrplot()
